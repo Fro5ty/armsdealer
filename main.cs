@@ -214,13 +214,67 @@ namespace ArmsDealer // v1.0.0 by Frosty
 
         private void ConfirmOrder()
         {
-            int orderTotal = currentOrder.Sum(item => item.Price);
             if (currentOrder.Count == 0)
             {
                 GTA.UI.Notification.PostTicker("Your order is empty!", false, false);
                 return;
             }
-            else if (!ChargePlayer(orderTotal))
+
+            OpenAmmoSelectionMenu(); // Ammo selection menu
+        }
+
+        private void OpenAmmoSelectionMenu()
+        {
+            UIMenu ammoMenu = new UIMenu("Ammo Selection", "Select ammo for each weapon");
+
+            // Add menu items for each weapon in the order
+            foreach (var weapon in currentOrder)
+            {
+                var ammoItem = new UIMenuSliderItem(weapon.Name + " Ammo", "Select amount of ammo", true)
+                {
+                    Value = 0 // Default ammo amount
+                };
+                ammoMenu.AddItem(ammoItem);
+            }
+
+            var placeOrderWithAmmoItem = new UIMenuItem("Place Order with Ammo", "Confirm your order with selected ammo");
+            var placeOrderWithoutAmmoItem = new UIMenuItem("Place Order without Ammo", "Confirm your order without ammo");
+            ammoMenu.AddItem(placeOrderWithAmmoItem);
+            ammoMenu.AddItem(placeOrderWithoutAmmoItem);
+
+            ammoMenu.OnItemSelect += (sender, item, index) =>
+            {
+                if (item == placeOrderWithAmmoItem)
+                {
+                    // Calculate total cost including ammo
+                    int ammoCost = CalculateAmmoCost(ammoMenu);
+                    FinalizeOrder(ammoCost);
+                }
+                else if (item == placeOrderWithoutAmmoItem)
+                {
+                    FinalizeOrder(0); // No additional cost for ammo
+                }
+            };
+
+            ammoMenu.Visible = true;
+        }
+
+        private int CalculateAmmoCost(UIMenu ammoMenu)
+        {
+            int totalAmmoCost = 0;
+            foreach (var item in ammoMenu.MenuItems.OfType<UIMenuSliderItem>())
+            {
+                int ammoAmount = item.Value;
+                int costPerUnit = 5; // Assuming a fixed cost per unit of ammo
+                totalAmmoCost += ammoAmount * costPerUnit;
+            }
+            return totalAmmoCost;
+        }
+
+        private void FinalizeOrder(int additionalCost)
+        {
+            int orderTotal = currentOrder.Sum(item => item.Price) + additionalCost;
+            if (!ChargePlayer(orderTotal))
             {
                 GTA.UI.Notification.PostTicker("You don't have enough money for this order.", false, false);
                 return;

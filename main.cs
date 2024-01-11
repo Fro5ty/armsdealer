@@ -98,6 +98,27 @@ namespace ArmsDealer // v1.0.0 by Frosty
                     }
                 }
             }
+
+            if (Game.Player.IsDead || Function.Call<bool>(GTA.Native.Hash.IS_PLAYER_BEING_ARRESTED, Game.Player, false))
+            {
+                if (orderTimer != null && !orderTimer.IsTimeUp)
+                {
+                    int refundAmount = currentOrder.Sum(item => item.Price);
+                    RefundPlayer(refundAmount); // Refund
+                    orderTimer.Reset(); // Timer Reset
+                    currentOrder.Clear(); // Clear order
+
+                    GTA.UI.Notification.PostTicker("You have died or been arrested. Your pending order has been canceled and you have been refunded.", false, false);
+                }
+                else if (deliveryVehicle != null && !isOrderStolen)
+                {
+                    deliveryVehicle.Delete(); // Clear delivery
+                    deliveryBlip.Delete(); // Clear blip
+                    currentOrder.Clear(); // Clear order
+
+                    GTA.UI.Notification.PostTicker("You have died or been arrested. You have lost your order.", false, false);
+                }
+            }
         }
 
         private void OpenMainMenu()

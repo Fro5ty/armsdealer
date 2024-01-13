@@ -176,7 +176,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
                 }
             };
 
-            mainMenu.Visible = true;
+            mainMenu.Visible = !mainMenu.Visible;
             iFruit.Close(2000);
         }
 
@@ -222,7 +222,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
                 }
             };
 
-            orderMenu.Visible = true;
+            orderMenu.Visible = !orderMenu.Visible;
         }
 
         private void ViewCurrentOrder()
@@ -284,7 +284,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
                 }
             };
 
-            ammoMenu.Visible = true;
+            ammoMenu.Visible = !ammoMenu.Visible;
         }
 
         private int CalculateAmmoCost(UIMenu ammoMenu)

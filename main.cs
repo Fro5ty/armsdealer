@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using GTA;
 using GTA.Math;
@@ -51,11 +52,23 @@ namespace ArmsDealer // v1.0.0 by Frosty
             // Add more weapons here...
         };
 
+        private Dictionary<string, int> ammoPrices = new Dictionary<string, int>
+        {
+            { "Pistol", 2 },
+            { "Assault Rifle", 3 },
+            { "Sniper Rifle", 5 },
+            { "Shotgun", 3 },
+            { "SMG", 2 },
+            // Add more weapons and their ammo prices here...
+        };
+
         public Main()
         {
             iFruit = new CustomiFruit();
             armsDealerContact = new iFruitContact("Arms Dealer");
             armsDealerContact.Answered += (contact) => OpenMainMenu();
+            armsDealerContact.DialTimeout = 3000;
+            armsDealerContact.Active = true;
             iFruit.Contacts.Add(armsDealerContact);
 
             Tick += OnTick;
@@ -160,6 +173,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
             };
 
             mainMenu.Visible = true;
+            iFruit.Close(2000);
         }
 
         private void OpenOrderMenu()
@@ -242,7 +256,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
             {
                 var ammoItem = new UIMenuSliderItem(weapon.Name + " Ammo", "Select amount of ammo", true)
                 {
-                    Value = 0 // Default ammo amount
+                    Value = 150 // Default ammo amount
                 };
                 ammoMenu.AddItem(ammoItem);
             }
@@ -272,11 +286,15 @@ namespace ArmsDealer // v1.0.0 by Frosty
         private int CalculateAmmoCost(UIMenu ammoMenu)
         {
             int totalAmmoCost = 0;
-            foreach (var item in ammoMenu.MenuItems.OfType<UIMenuSliderItem>())
+            for (int i = 0; i < currentOrder.Count; i++)
             {
-                int ammoAmount = item.Value;
-                int costPerUnit = 5; // Assuming a fixed cost per unit of ammo
-                totalAmmoCost += ammoAmount * costPerUnit;
+                var weapon = currentOrder[i];
+                var sliderItem = (UIMenuSliderItem)ammoMenu.MenuItems[i];
+                int extraAmmo = sliderItem.Value - 150; // Calculate extra ammo beyond the default 150
+                if (extraAmmo > 0)
+                {
+                    totalAmmoCost += extraAmmo * ammoPrices[weapon.Name]; // Add cost for extra ammo
+                }
             }
             return totalAmmoCost;
         }
@@ -363,7 +381,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
         private void GiveItemToPlayer(WeaponItem item)
         {
             WeaponHash weaponHash = GetWeaponHashFromName(item.Name);
-            Game.Player.Character.Weapons.Give(weaponHash, 1, true, true);
+            Game.Player.Character.Weapons.Give(weaponHash, item.Ammo, true, true);
         }
 
         private WeaponHash GetWeaponHashFromName(string weaponName)

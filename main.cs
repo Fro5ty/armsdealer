@@ -16,8 +16,10 @@ namespace ArmsDealer // v1.0.0 by Frosty
         private iFruitContact armsDealerContact;
         private UIMenu mainMenu;
         private UIMenu orderMenu;
+        private UIMenu ammoMenu;
         private GameTimer orderTimer;
         private Random random = new Random();
+
         private List<WeaponItem> currentOrder = new List<WeaponItem>();
         private List<WeaponItem> availableStock = new List<WeaponItem>();
         private TimeSpan lastStockUpdateTime;
@@ -146,6 +148,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
 
         private void OpenMainMenu()
         {
+            GTA.UI.Notification.PostTicker("main menu open", false, false);
             mainMenu = new UIMenu("Arms Dealer", "Choose an option");
 
             var placeOrderItem = new UIMenuItem("Place Order", "Place an order for weapons");
@@ -155,6 +158,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
             mainMenu.AddItem(placeOrderItem);
             mainMenu.AddItem(viewStockItem);
             mainMenu.AddItem(cancelOrderItem);
+            mainMenu.RefreshIndex();
 
             mainMenu.OnItemSelect += (sender, item, index) =>
             {
@@ -249,7 +253,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
 
         private void OpenAmmoSelectionMenu()
         {
-            UIMenu ammoMenu = new UIMenu("Ammo Selection", "Select ammo for each weapon");
+            ammoMenu = new UIMenu("Ammo Selection", "Select ammo for each weapon");
 
             // Add menu items for each weapon in the order
             foreach (var weapon in currentOrder)

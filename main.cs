@@ -451,11 +451,13 @@ namespace ArmsDealer // v1.0.0 by Frosty
     {
         public string Name { get; set; }
         public int Price { get; set; }
+        public int Ammo { get; set; }
 
         public WeaponItem(string name, int price)
         {
             Name = name;
             Price = price;
+            Ammo = 150; // Default ammo amount
         }
     }
 

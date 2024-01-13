@@ -25,10 +25,20 @@ namespace ArmsDealer // v1.0.0 by Frosty
         private DateTime vehicleSpawnTime;
         private bool isOrderStolen = false;
 
-        private List<Vector3> deliveryLocations = new List<Vector3>
+        private List<Location> deliveryLocations = new List<Location>
         {
-            new Vector3(123.456f, 789.012f, 45.678f), // Add more delivery locations as needed
-            // Add additional delivery locations here...
+            // LS Locations
+            new Location(new Vector3(-13.72f, -1817.01f, 25.53f), 319.48f), // Grove St
+            new Location(new Vector3(358.85f, -2441.50f, 6.10f), 0.37f), // LS Port Area
+            new Location(new Vector3(1701.80f, -1432.06f, 112.52f), 291.39f), // LS Oil Field
+            new Location(new Vector3(-1613.00f, -1000.21f, 7.35f), 228.21f), // Under Pier
+            new Location(new Vector3(1448.23f, 1128.80f, 114.03f), 269.22f), // Madrazo House
+            new Location(new Vector3(35.68f, -1021.58f, 29.17f), 339.98f), // Near Center LS
+            // North San Andreas Locations
+            new Location(new Vector3(2682.35f, 3293.92f, 54.94f), 62.72f), // Highway Gas Station
+            new Location(new Vector3(1486.95f, 3752.86f, 33.50f), 31.20f), // Boat Motel
+            new Location(new Vector3(2297.00f, 4889.65f, 41.09f), 132.72f), // Meth Farm
+            new Location(new Vector3(1689.25f, 6435.63f, 32.25f), 333.32f), // North SA Gas Sation
         };
 
         private List<WeaponItem> allPossibleWeapons = new List<WeaponItem>
@@ -323,7 +333,7 @@ namespace ArmsDealer // v1.0.0 by Frosty
         private void SpawnDeliveryVehicle()
         {
             var randomLocation = deliveryLocations[random.Next(0, deliveryLocations.Count)];
-            deliveryVehicle = World.CreateVehicle(new Model("adder"), randomLocation);
+            deliveryVehicle = World.CreateVehicle(new Model("adder"), randomLocation.Position);
             deliveryBlip = deliveryVehicle.AddBlip();
             deliveryBlip.ShowRoute = true; // Add GPS
 
@@ -422,6 +432,18 @@ namespace ArmsDealer // v1.0.0 by Frosty
             }
 
             isOrderStolen = true;
+        }
+    }
+
+    public class Location
+    {
+        public Vector3 Position { get; set; }
+        public float Heading { get; set; }
+
+        public Location(Vector3 position, float heading)
+        {
+            Position = position;
+            Heading = heading;
         }
     }
 

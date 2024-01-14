@@ -1,179 +1,114 @@
-Image	Weapon	Damage	Rate of fire	Accuracy	Range	Category
-Image not available.	Widowmaker
-(weapon_rayminigun)	30	100	40	55	Heavy Weapon
-Image not available.	Vintage Pistol
-(weapon_vintagepistol)	35	40	40	25	Pistol
-Image not available.	Up-n-Atomizer
-(weapon_raypistol)	30	10	30	20	Pistol
-Image not available.	Unholy Hellbringer
-(weapon_raycarbine)	55	65	45	60	Light-Machine Gun
-Image not available.	Tear Gas
-(weapon_smokegrenade)	10	1	10	15	Throwable
-Image not available.	Switchblade
-(weapon_switchblade)	15	20	0	0	Melee
-Image not available.	Sweeper Shotgun
-(weapon_autoshotgun)	70	45	22	20	Shotgun
-Image not available.	Stun Gun
-(weapon_stungun)	1	10	40	5	Other
-Image not available.	Stone Hatchet
-(weapon_stone_hatchet)	30	15	0	0	Melee
-Image not available.	Sticky Bomb
-(weapon_stickybomb)	95	1	30	10	Throwable
-Image not available.	Special Carbine
-(weapon_specialcarbine)	34	65	55	40	Assault Rifle
-Image not available.	Special Carbine Mk II
-(weapon_specialcarbine_mk2)	36	65	55	40	Assault Rifle
-Image not available.	SNS Pistol
-(weapon_snspistol)	30	40	40	20	Pistol
-Image not available.	SNS Pistol Mk II
-(weapon_snspistol_mk2)	32	40	40	20	Pistol
-Image not available.	Snowball
-(weapon_snowball)	0	1	10	0	Throwable
-Image not available.	Sniper Rifle
-(weapon_sniperrifle)	96	25	70	95	Sniper Rifle
-Image not available.	SMG
-(weapon_smg)	22	55	40	35	Sub-Machine Gun
-Image not available.	SMG Mk II
-(weapon_smg_mk2)	26	55	40	35	Sub-Machine Gun
-Image not available.	Sawed-Off Shotgun
-(weapon_sawnoffshotgun)	96	20	20	15	Shotgun
-Image not available.	RPG
-(weapon_rpg)	100	5	10	70	Heavy Weapon
-Image not available.	Railgun
-(weapon_railgun)	90	25	20	70	Heavy Weapon
-Image not available.	Pump Shotgun
-(weapon_pumpshotgun)	67	20	30	20	Shotgun
-Image not available.	Pump Shotgun Mk II
-(weapon_pumpshotgun_mk2)	70	20	30	20	Shotgun
-Image not available.	Proximity Mine
-(weapon_proxmine)	90	1	30	20	Throwable
-Image not available.	Pool Cue
-(weapon_poolcue)	20	10	0	0	Melee
-Image not available.	Pistol
-(weapon_pistol)	26	40	40	25	Pistol
-Image not available.	Pistol Mk II
-(weapon_pistol_mk2)	38	40	40	25	Pistol
-Image not available.	Pistol .50
-(weapon_pistol50)	51	40	55	35	Pistol
-Image not available.	Pipe Wrench
-(weapon_wrench)	10	15	0	0	Melee
-Image not available.	Pipe Bomb
-(weapon_pipebomb)	85	1	35	15	Throwable
-Image not available.	Nightstick
-(weapon_nightstick)	10	15	0	0	Melee
-Image not available.	Musket
-(weapon_musket)	97	10	65	85	Shotgun
-Image not available.	Molotov
-(weapon_molotov)	50	1	20	8	Throwable
-Image not available.	Minigun
-(weapon_minigun)	30	100	40	55	Heavy Weapon
-Image not available.	Mini SMG
-(weapon_minismg)	22	84	33	30	Sub-Machine Gun
-Image not available.	Micro SMG
-(weapon_microsmg)	21	60	30	25	Sub-Machine Gun
-Image not available.	MG
-(weapon_mg)	50	60	40	60	Light-Machine Gun
-Image not available.	Marksman Rifle
-(weapon_marksmanrifle)	70	40	80	90	Sniper Rifle
-Image not available.	Marksman Rifle Mk II
-(weapon_marksmanrifle_mk2)	75	40	80	90	Sniper Rifle
-Image not available.	Marksman Pistol
-(weapon_marksmanpistol)	80	15	30	35	Sub-Machine Gun
-Image not available.	Machine Pistol
-(weapon_machinepistol)	28	70	40	30	Pistol
-Image not available.	Machete
-(weapon_machete)	15	15	0	0	Melee
-Image not available.	Knuckle Duster
-(weapon_knuckle)	5	20	0	0	Melee
-Image not available.	Knife
-(weapon_knife)	15	20	0	0	Melee
-Image not available.	Jerry Can
-(weapon_petrolcan)	0	10	30	1	Other
-Image not available.	Homing Launcher
-(weapon_hominglauncher)	95	5	25	75	Heavy Weapon
-Image not available.	Heavy Sniper
-(weapon_heavysniper)	98	20	90	100	Sniper Rifle
-Image not available.	Heavy Sniper Mk II
-(weapon_heavysniper_mk2)	100	20	90	100	Sniper Rifle
-Image not available.	Heavy Shotgun
-(weapon_heavyshotgun)	85	45	30	25	Shotgun
-Image not available.	Heavy Revolver
-(weapon_revolver)	70	20	65	35	Pistol
-Image not available.	Heavy Revolver Mk II
-(weapon_revolver_mk2)	75	30	65	35	Pistol
-Image not available.	Heavy Pistol
-(weapon_heavypistol)	40	40	50	35	Pistol
-Image not available.	Hatchet
-(weapon_hatchet)	15	15	0	0	Melee
-Image not available.	Hammer
-(weapon_hammer)	10	15	0	0	Melee
-Image not available.	Gusenberg Sweeper
-(weapon_gusenberg)	34	65	38	56	Light-Machine Gun
-Image not available.	Grenade
-(weapon_grenade)	95	1	10	15	Throwable
-Image not available.	Grenade Launcher
-(weapon_grenadelauncher)	95	20	10	50	Heavy Weapon
-Image not available.	Golf Club
-(weapon_golfclub)	20	10	0	0	Melee
-Image not available.	Flashlight
-(weapon_flashlight)	10	15	0	0	Melee
-Image not available.	Flare
-(weapon_flare)	0	1	10	25	Throwable
-Image not available.	Flare Gun
-(weapon_flaregun)	20	10	30	10	Pistol
-Image not available.	Firework Launcher
-(weapon_firework)	45	5	12	60	Heavy Weapon
-Image not available.	Fire Extinguisher
-(weapon_fireextinguisher)	0	100	10	35	Other
-Image not available.	Double-Action Revolver
-(weapon_doubleaction)	60	40	60	35	Pistol
-Image not available.	Double Barrel Shotgun
-(weapon_dbshotgun)	98	25	15	10	Shotgun
-Image not available.	Crowbar
-(weapon_crowbar)	10	15	0	0	Melee
-Image not available.	Compact Rifle
-(weapon_compactrifle)	36	60	35	45	Assault Rifle
-Image not available.	Compact Grenade Launcher
-(weapon_compactlauncher)	95	10	15	55	Heavy Weapon
-Image not available.	Combat Pistol
-(weapon_combatpistol)	27	40	50	30	Pistol
-Image not available.	Combat PDW
-(weapon_combatpdw)	25	50	45	38	Sub-Machine Gun
-Image not available.	Combat MG
-(weapon_combatmg)	55	65	45	60	Light-Machine Gun
-Image not available.	Combat MG Mk II
-(weapon_combatmg_mk2)	57	65	45	60	Light-Machine Gun
-Image not available.	Carbine Rifle
-(weapon_carbinerifle)	32	65	55	45	Assault Rifle
-Image not available.	Carbine Rifle Mk II
-(weapon_carbinerifle_mk2)	36	65	55	45	Assault Rifle
-Image not available.	BZ Gas
-(weapon_bzgas)	0	1	10	15	Throwable
-Image not available.	Bullpup Shotgun
-(weapon_bullpupshotgun)	67	20	30	20	Shotgun
-Image not available.	Bullpup Rifle
-(weapon_bullpuprifle)	32	72	45	45	Assault Rifle
-Image not available.	Bullpup Rifle Mk II
-(weapon_bullpuprifle_mk2)	34	72	45	45	Assault Rifle
-Image not available.	Bottle
-(weapon_bottle)	20	15	0	0	Melee
-Image not available.	Battle Axe
-(weapon_battleaxe)	15	15	0	0	Melee
-Image not available.	Baseball Bat
-(weapon_bat)	20	10	0	0	Melee
-Image not available.	Ball
-(weapon_ball)	0	1	10	0	Throwable
-Image not available.	Assault SMG
-(weapon_assaultsmg)	23	55	45	40	Sub-Machine Gun
-Image not available.	Assault Shotgun
-(weapon_assaultshotgun)	77	50	25	15	Shotgun
-Image not available.	Assault Rifle
-(weapon_assaultrifle)	30	60	45	45	Assault Rilfe
-Image not available.	Assault Rifle Mk II
-(weapon_assaultrifle_mk2)	33	60	45	45	Assault Rifle
-Image not available.	AP Pistol
-(weapon_appistol)	26	80	35	30	Pistol
-Image not available.	Antique Cavalry Dagger
-(weapon_dagger)	20	20	0	0	Melee
-Image not available.	Advanced Rifle
-(weapon_advancedrifle)	34	70	50	45	Assault Rifle
+Knife = 2578778090u,
+Nightstick = 1737195953u,
+Hammer = 1317494643u,
+Bat = 2508868239u,
+GolfClub = 1141786504u,
+Crowbar = 2227010557u,
+Bottle = 4192643659u,
+SwitchBlade = 3756226112u,
+BattleAxe = 3441901897u,
+PoolCue = 2484171525u,
+Wrench = 419712736u,
+StoneHatchet = 940833800u,
+CandyCane = 1703483498u,
+Pistol = 453432689u,
+PistolMk2 = 3219281620u,
+CombatPistol = 1593441988u,
+APPistol = 584646201u,
+Pistol50 = 2578377531u,
+FlareGun = 1198879012u,
+MarksmanPistol = 3696079510u,
+Revolver = 3249783761u,
+RevolverMk2 = 3415619887u,
+DoubleActionRevolver = 2548703416u,
+UpNAtomizer = 2939590305u,
+CeramicPistol = 727643628u,
+NavyRevolver = 2441047180u,
+MetalDetector = 3684886537u,
+PericoPistol = 1470379660u,
+WM29Pistol = 465894841u,
+HackingDevice = 485882440u,
+MicroSMG = 324215364u,
+SMG = 736523883u,
+SMGMk2 = 2024373456u,
+AssaultSMG = 4024951519u,
+CombatPDW = 171789620u,
+MiniSMG = 3173288789u,
+TacticalSMG = 350597077u,
+AssaultRifle = 3220176749u,
+AssaultrifleMk2 = 961495388u,
+CarbineRifle = 2210333304u,
+CarbineRifleMk2 = 4208062921u,
+AdvancedRifle = 2937143193u,
+CompactRifle = 1649403952u,
+MilitaryRifle = 2636060646u,
+HeavyRifle = 3347935668u,
+ServiceCarbine = 3520460075u,
+BattleRifle = 1924557585u,
+MG = 2634544996u,
+CombatMG = 2144741730u,
+CombatMGMk2 = 3686625920u,
+UnholyHellbringer = 1198256469u,
+PumpShotgun = 487013001u,
+PumpShotgunMk2 = 1432025498u,
+SawnOffShotgun = 2017895192u,
+AssaultShotgun = 3800352039u,
+BullpupShotgun = 2640438543u,
+DoubleBarrelShotgun = 4019527611u,
+SweeperShotgun = 317205821u,
+CombatShotgun = 94989220u,
+StunGun = 911657153u,
+StunGunMultiplayer = 1171102963u,
+SniperRifle = 100416529u,
+HeavySniper = 205991906u,
+HeavySniperMk2 = 177293209u,
+PrecisionRifle = 1853742572u,
+GrenadeLauncher = 2726580491u,
+GrenadeLauncherSmoke = 1305664598u,
+CompactGrenadeLauncher = 125959754u,
+CompactEMPLauncher = 3676729658u,
+RPG = 2982836145u,
+Minigun = 1119849093u,
+Widowmaker = 3056410471u,
+SnowballLauncher = 62870901u,
+Grenade = 2481070269u,
+StickyBomb = 741814745u,
+SmokeGrenade = 4256991824u,
+BZGas = 2694266206u,
+Molotov = 615608432u,
+PipeBomb = 3125143736u,
+FireExtinguisher = 101631238u,
+PetrolCan = 883325847u,
+HazardousJerryCan = 3126027122u,
+FertilizerCan = 406929569u,
+AcidPackage = 4159824478u,
+SNSPistol = 3218215474u,
+SNSPistolMk2 = 2285322324u,
+SpecialCarbine = 3231910285u,
+SpecialCarbineMk2 = 2526821735u,
+HeavyPistol = 3523564046u,
+BullpupRifle = 2132975508u,
+BullpupRifleMk2 = 2228681469u,
+HomingLauncher = 1672152130u,
+ProximityMine = 2874559379u,
+Snowball = 126349499u,
+VintagePistol = 137902532u,
+Dagger = 2460120199u,
+Firework = 2138347493u,
+Musket = 2828843422u,
+MarksmanRifle = 3342088282u,
+MarksmanRifleMk2 = 1785463520u,
+HeavyShotgun = 984333226u,
+Gusenberg = 1627465347u,
+Hatchet = 4191993645u,
+Railgun = 1834241177u,
+RailgunXmas3 = 4272043364u,
+Unarmed = 2725352035u,
+KnuckleDuster = 3638508604u,
+Machete = 3713923289u,
+MachinePistol = 3675956304u,
+Flashlight = 2343591895u,
+Ball = 600439132u,
+Flare = 1233104067u,
+NightVision = 2803906140u,
+Parachute = 4222310262u
